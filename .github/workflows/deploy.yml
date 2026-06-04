@@ -2,7 +2,8 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches: ["main"] # Change to "master" if your default branch is named master
+    branches: ["main"]
+  
 
 permissions:
   contents: read
@@ -29,7 +30,7 @@ jobs:
       - name: Upload Artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './src' # This tells GitHub to host everything inside your src folder
+          path: './src'
 
       - name: Deploy to GitHub Pages
         id: deployment
